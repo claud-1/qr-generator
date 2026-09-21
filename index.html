@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Generador de códigos QR</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <h1>Generador de códigos QR</h1>
+
+        <p>Introduce una dirección web y genera un código QR.</p>
+
+        <input
+            type="text"
+            id="url"
+            placeholder="https://www.ejemplo.com"
+        >
+
+        <button id="generarBtn">
+            Generar QR
+        </button>
+
+        <p id="mensaje"></p>
+
+        <div id="qrcode"></div>
+
+        <button id="descargarBtn" disabled>
+            Descargar PNG
+        </button>
+
+        <audio id="sonidoQR" src="sounds/trumpets.mp3" preload="auto"></audio>
+
+    </main>
+
+    <!-- Librería para generar códigos QR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    
+    <!-- Librería para generar confeti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <!-- Nuestro JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
